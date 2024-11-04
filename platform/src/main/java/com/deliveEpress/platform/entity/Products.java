@@ -26,21 +26,10 @@ public class Products implements Serializable {
     private String description;
 
     @Column(name = "original_price", nullable = false)
-    private Double originalPrice;
+    private Double price;
 
-    @Column(name = "reduced_price")
-    private Double reducedPrice;
 
-    @Column(name = "discount_rate")
-    private Double discountRate;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "stock_status", nullable = false)
-    private StockStatus stockStatus;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "product_badge")
-    private ProductBadge productBadge;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -53,19 +42,8 @@ public class Products implements Serializable {
     @Column(nullable = false, unique = true)
     private String ref;
 
-    public enum StockStatus {
-        IN_STOCK,
-        LOW_STOCK,
-        OUT_OF_STOCK
-    }
 
-    public enum ProductBadge {
-        NONE,
-        HOT,
-        NEW,
-        TRENDING,
-        BEST_SELLER
-    }
+
 
     public enum Category {
         ELECTRONICS,

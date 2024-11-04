@@ -13,10 +13,7 @@ public class ProductsDTO {
     private String name;
     private String description;
     private Double originalPrice;
-    private Double reducedPrice;
-    private Double discountRate;
-    private Products.StockStatus stockStatus;
-    private Products.ProductBadge productBadge;
+    private Double price;
     private Products.Category category;
     private double quantity;
     private String ref;
